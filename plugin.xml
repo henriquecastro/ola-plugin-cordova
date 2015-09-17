@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="br.com.helpper.meutoast"
+	version="0.1">
+
+	<name>Meu Ola Plugin</name>
+	<description>Exemplo de Plugin com Toast</description>
+
+	<engines>
+		<engine name="cordova" version=">=4.0.0" />
+	</engines>
+
+	<asset src="www/toast.js" target="js/toast.js" />
+
+	<js-module src="www/toast.js" name="MeuToast">
+		<clobbers target="meu.toast" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="MeuToast">
+				<param name="android-package" value="br.com.helpper.meutoast.MeuToast" />
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/MeuToast.java" target-dir="src/br/com/helpper/toast/" />
+	</platform>
+
+<!--
+	<platform name="ios">
+
+		<config-file target="config.xml" parent="/widget">
+			<feature name="MeuToast">
+				<param name="ios-package" value="MeuToast" />
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/MeuToast.h" target-dir="MeuToastPlugin" />
+		<source-file src="src/ios/MeuToast.m" target-dir="MeuToastPlugin" />
+
+	</platform>	
+-->
+</plugin>
