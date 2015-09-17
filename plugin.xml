@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	id="br.com.helpper.meutoast"
-	version="0.1">
+        id="br.com.helpper.meutoast"
+        version="0.1.0">
 
 	<name>Meu Ola Plugin</name>
 	<description>Exemplo de Plugin com Toast</description>
@@ -27,18 +26,5 @@
 		<source-file src="src/android/MeuToast.java" target-dir="src/br/com/helpper/toast/" />
 	</platform>
 
-<!--
-	<platform name="ios">
 
-		<config-file target="config.xml" parent="/widget">
-			<feature name="MeuToast">
-				<param name="ios-package" value="MeuToast" />
-			</feature>
-		</config-file>
-
-		<header-file src="src/ios/MeuToast.h" target-dir="MeuToastPlugin" />
-		<source-file src="src/ios/MeuToast.m" target-dir="MeuToastPlugin" />
-
-	</platform>	
--->
 </plugin>
